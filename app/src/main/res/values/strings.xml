@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Long Press Bot</string>
+    <string name="accessibility_service_label">Long Press Bot Service</string>
+    <string name="accessibility_service_description">Enables continuous long-press gesture simulation at a specified screen position.</string>
+    <string name="channel_name">Long Press Bot</string>
+    <string name="channel_description">Foreground service for overlay button</string>
+    <string name="notification_title">Long Press Bot Active</string>
+    <string name="notification_text">Use the floating panel to start/stop. Drag ⊕ to set tap position.</string>
+</resources>

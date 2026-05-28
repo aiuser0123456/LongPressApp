@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="overlay_button_size">56dp</dimen>
+    <dimen name="section_spacing">12dp</dimen>
+</resources>
