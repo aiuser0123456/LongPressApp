@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.longpress.app">
 
-    <!-- Required for the draggable floating overlay button -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <!-- Required for the foreground OverlayService on Android 9+ -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
@@ -14,22 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LongPressApp">
 
-        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!--
-            Accessibility Service
-            - android:permission ensures only the system can bind to it
-            - canPerformGestures is declared in the XML config file
-        -->
         <service
             android:name=".LongPressAccessibilityService"
             android:exported="true"
@@ -43,15 +35,9 @@
                 android:resource="@xml/accessibility_service_config" />
         </service>
 
-        <!--
-            Overlay foreground service.
-            foregroundServiceType is omitted here for broadest SDK compatibility;
-            the service itself calls startForeground() with a notification.
-        -->
         <service
             android:name=".OverlayService"
             android:exported="false" />
 
     </application>
-
 </manifest>
